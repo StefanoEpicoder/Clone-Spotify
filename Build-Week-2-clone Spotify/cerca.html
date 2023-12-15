@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+    <style>
+      .card {
+        aspect-ratio: 1/1;
+      }
+    </style>
+  </head>
+
+  <body class="bg-black">
+    <div class="container">
+      <h4 class="text-white mt-5 mb-4 fw-bold d-flex justify-content-between">
+        Cerca
+        <span class="ms-auto" onclick="window.history.back();" style="cursor: pointer"
+          ><i class="bi bi-x-lg text-secondary"></i>
+        </span>
+      </h4>
+
+      <form class="d-flex" role="search">
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Cerca..."
+          class="form-control me-2 bg-dark text-secondary border-0 py-2"
+          style="font-family: Arial, FontAwesome"
+          aria-label="Search"
+        />
+      </form>
+      <div id="searchResults"></div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-12">
+          <div>
+            <p class="text-white text-center">Sfoglia tutto</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 col-xl-2 pe-2">
+          <div>
+            <div class="rounded-2 bg-danger mb-3 position-relative overflow-hidden card" style="cursor: pointer">
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Podcast</p>
+              <img
+                src="./assets/imgs/search/image-1.jpeg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div class="rounded-2 bg-info mb-3 position-relative overflow-hidden card" style="cursor: pointer">
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Nuove uscite</p>
+              <img
+                src="./assets/imgs/search/image-2.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(199, 199, 0); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Hip Hop</p>
+              <img
+                src="./assets/imgs/search/image-3.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div class="rounded-2 bg-success mb-3 position-relative overflow-hidden card" style="cursor: pointer">
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Latina</p>
+              <img
+                src="./assets/imgs/search/image-4.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: palevioletred; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Studenti</p>
+              <img
+                src="./assets/imgs/search/image-25.jpeg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: mediumaquamarine; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Tastemaker</p>
+              <img
+                src="./assets/imgs/search/image-31.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: maroon; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Arabo</p>
+              <img
+                src="./assets/imgs/search/image-32.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: midnightblue; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Benessere</p>
+              <img
+                src="./assets/imgs/search/image-33.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-xl-2 ps-2">
+          <div>
+            <div class="rounded-2 bg-primary mb-3 position-relative overflow-hidden card" style="cursor: pointer">
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Creato per te</p>
+              <img
+                src="./assets/imgs/search/image-5.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(74, 122, 155); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Pop</p>
+              <img
+                src="./assets/imgs/search/image-6.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: purple; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Dance/ Elettronica</p>
+              <img
+                src="./assets/imgs/search/image-7.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: aquamarine; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Classifiche</p>
+              <img
+                src="./assets/imgs/search/image-8.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(132, 196, 35); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Anni</p>
+              <img
+                src="./assets/imgs/search/image-26.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: lightskyblue; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Glow</p>
+              <img
+                src="./assets/imgs/search/image-34.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: lightseagreen; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Fresh Finds</p>
+              <img
+                src="./assets/imgs/search/image-35.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(126, 106, 112); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Funk</p>
+              <img
+                src="./assets/imgs/search/image-36.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- inizio nuove categorie musica -->
+        <div class="col-6 col-sm-4 col-md-3 col-xl-2 ps-2">
+          <div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(167, 197, 59); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Eventi dal vivo</p>
+              <img
+                src="./assets/imgs/search/image-9.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: fuchsia; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Di tendenza</p>
+              <img
+                src="./assets/imgs/search/image-10.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: coral; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Estate</p>
+              <img
+                src="./assets/imgs/search/image-11.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(255, 0, 0); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Buone feste</p>
+              <img
+                src="./assets/imgs/search/image-12.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(155, 151, 109); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Radar</p>
+              <img
+                src="./assets/imgs/search/image-27.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(187, 179, 111); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Reggae</p>
+              <img
+                src="./assets/imgs/search/image-37.jpeg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: hotpink; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Ambient</p>
+              <img
+                src="./assets/imgs/search/image-38.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: gold; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Caraibi</p>
+              <img
+                src="./assets/imgs/search/image-39.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-xl-2 d-sm-none d-md-block ps-2">
+          <div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(22, 134, 0); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Solo su Spotify</p>
+              <img
+                src="./assets/imgs/search/image-13.jpeg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(92, 40, 40); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Rock</p>
+              <img
+                src="./assets/imgs/search/image-14.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(119, 0, 255); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Indie</p>
+              <img
+                src="./assets/imgs/search/image-15.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(70, 162, 255); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Scopri</p>
+              <img
+                src="./assets/imgs/search/image-16.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: burlywood; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Jazz</p>
+              <img
+                src="./assets/imgs/search/image-28.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: firebrick; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Alternative</p>
+              <img
+                src="./assets/imgs/search/image-40.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: forestgreen; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Metal</p>
+              <img
+                src="./assets/imgs/search/image-41.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: red; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Netflix</p>
+              <img
+                src="./assets/imgs/search/image-42.png"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-2 d-none d-xl-block ps-2">
+          <div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(218, 127, 177); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Mood</p>
+              <img
+                src="./assets/imgs/search/image-17.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(172, 160, 60); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Sanremo</p>
+              <img
+                src="./assets/imgs/search/image-18.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(23, 2, 143); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">In auto</p>
+              <img
+                src="./assets/imgs/search/image-19.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(119, 133, 81); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Allenamento</p>
+              <img
+                src="./assets/imgs/search/image-20.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: mediumvioletred; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Anime</p>
+              <img
+                src="./assets/imgs/search/image-29.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(202, 194, 78); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Country</p>
+              <img
+                src="./assets/imgs/search/image-48.jpeg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: dodgerblue; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Soul</p>
+              <img
+                src="./assets/imgs/search/image-44.png"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: darkviolet; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">A casa</p>
+              <img
+                src="./assets/imgs/search/image-45.png"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-2 d-none d-xl-block ps-2">
+          <div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(150, 40, 0); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Relax</p>
+              <img
+                src="./assets/imgs/search/image-21.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(127, 45, 134); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">K-pop</p>
+              <img
+                src="./assets/imgs/search/image-22.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(129, 192, 211); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Gaming</p>
+              <img
+                src="./assets/imgs/search/image-23.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: rgb(25, 121, 92); cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Viaggi</p>
+              <img
+                src="./assets/imgs/search/image-24.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: lightsalmon; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Classica</p>
+              <img
+                src="./assets/imgs/search/image-30.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: darkorange; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Party</p>
+              <img
+                src="./assets/imgs/search/image-46.jpeg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: darkolivegreen; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Equal</p>
+              <img
+                src="./assets/imgs/search/image-47.jpg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+            <div
+              class="rounded-2 mb-3 position-relative overflow-hidden card"
+              style="background-color: turquoise; cursor: pointer"
+            >
+              <p class="text-white p-2 m-0 position-absolute top-0 start-0 fw-bold fs-5">Dormire</p>
+              <img
+                src="./assets/imgs/search/image-48.jpeg"
+                alt="copertina album"
+                style="width: 70px; rotate: 30deg"
+                class="position-absolute bottom-0 end-0 rounded-3"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/token.js"></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>
